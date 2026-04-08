@@ -48,12 +48,6 @@ Interactive mode in a subdirectory:
 pnpm tui -- --cwd playground/
 ```
 
-Interactive mode with Anthropic Haiku in a subdirectory:
-
-```bash
-pnpm tui -- --provider anthropic --model claude-3-haiku-20240307 --cwd playground/
-```
-
 Single prompt:
 
 ```bash
