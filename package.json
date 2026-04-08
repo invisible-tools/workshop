@@ -1,0 +1,21 @@
+{
+  "name": "goodytwoshoes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "tui": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.67",
+    "@ai-sdk/openai": "^3.0.51",
+    "ai": "^6.0.149",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.14.0"
+}
