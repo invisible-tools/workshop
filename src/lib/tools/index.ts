@@ -11,11 +11,6 @@ export {
 } from "./mutation-permission.js";
 export { createReadTool, readTool, type ReadToolOutput } from "./read.js";
 export {
-  createReportTool,
-  reportTool,
-  type SelfDiagnosticToolOutput,
-} from "./self-diagnostic.js";
-export {
   DEFAULT_MAX_BYTES,
   DEFAULT_MAX_LINES,
   GREP_MAX_LINE_LENGTH,
@@ -35,7 +30,6 @@ import { createFindTool } from "./find.js";
 import { createGrepTool } from "./grep.js";
 import { createLsTool } from "./ls.js";
 import { createReadTool } from "./read.js";
-import { createReportTool } from "./self-diagnostic.js";
 import { createWriteTool } from "./write.js";
 
 export function createCodingTools(cwd: string) {
@@ -43,8 +37,7 @@ export function createCodingTools(cwd: string) {
     read: createReadTool(cwd),
     bash: createBashTool(cwd),
     edit: createEditTool(cwd),
-    write: createWriteTool(cwd),
-    report: createReportTool(),
+    write: createWriteTool(cwd)
   } satisfies ToolSet;
 }
 
@@ -54,7 +47,6 @@ export function createReadOnlyTools(cwd: string) {
     grep: createGrepTool(cwd),
     find: createFindTool(cwd),
     ls: createLsTool(cwd),
-    report: createReportTool(),
   } satisfies ToolSet;
 }
 
@@ -67,7 +59,6 @@ export function createAllTools(cwd: string) {
     grep: createGrepTool(cwd),
     find: createFindTool(cwd),
     ls: createLsTool(cwd),
-    report: createReportTool(),
   } satisfies ToolSet;
 }
 
